@@ -3,12 +3,50 @@
 <head>
     <meta charset='utf-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    <title>Page Title</title>
+    <title>ALARM CLOCK</title>
+    <link  rel="icon" type="images/x-icon" href="https://cdn-icons-png.flaticon.com/512/1571/1571726.png" />
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel='stylesheet' type='text/css' media='screen' href='style.css'>
 </head>
 <body>
+    <div class="outer-div">
+        <div id="mode">
+            <div id="twelve">12</div>
+        </div>
+        <div id="container">
+            <div class="data-box">
+                <h1 class="data">Sun Apr 02 2023 21:58:00 GMT+0530 (India Standard Time)</h1>
+            </div>
+            <div id="clock">
+                <div id="clock-display">00:00:00</div>
+                <h1 id="am-pm-text">||</h1>
+            </div>
+            <div class="take-input">
+                <input type="number" id="hour">
+                    <input type="number" id="minute">
+                    <input type="number" id="second">
+                    <div id="am-pm-checkbox">AM</div>  
+            </div>
+        <!-- alarm list section -->
+            <div class="alarm-list-section" id="alarm-list">
+                <ul class="alarm-list">
+                    
+                    <div id ='delete-button'>
+                    
 
+                    </div>
+                </ul>
+            </div>
+            <div class="working">
+                <div>
+                    <button id="start" onclick="setAlarm()">Set Alarm</button>
+                </div>
+                <div>
+                    <button id="stop" style="margin-left: 40px;" onclick="clearAlarm()">Clear Alarm</button>
+                </div>
+            </div>
+        </div>
+    </div>
 <script src="script.js" ></script>
 </body>
 </html>

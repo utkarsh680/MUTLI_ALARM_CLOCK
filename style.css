@@ -1,0 +1,16 @@
+body{
+    padding: 0;
+    margin: 0;
+    height: 100vh;
+    background-color: #e3edf7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-size: cover;
+}
+.outer-div {
+    height: 800px;
+    width: 550px;
+    border-radius: 15px;
+    box-shadow: 5px 5px 10px #dfe0e0, -5px -5px 20px #fafafa;
+  }
