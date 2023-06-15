@@ -2,6 +2,43 @@ var clockDisplay = document.getElementById('clock-display');
 var am_pm_text_display = document.getElementById("am-pm-text");
 var dateDisplay = document.querySelector(".date");
 
+const audio = new Audio('/music.mp3');
+
+
+
+
+// for changin am pm
+var am_pm_checkbox = document.getElementById('am-pm-checkbox');
+var amPm = 'AM'
+am_pm_checkbox.addEventListener('click', function(){
+    am_pm_checkbox.classList.toggle('active');
+    if(am_pm_checkbox.classList.contains('active')){
+        amPm = 'PM';
+        am_pm_checkbox.innerHTML = 'PM';
+        console.log(amPm);
+    }else{
+        amPm = 'AM';
+        am_pm_checkbox.innerHTML = 'AM';
+        console.log(amPm);
+    }
+});
+var hour = document.getElementById('hour');
+var minute = document.getElementById('minute');
+var second = document.getElementById('second');
+
+audio.loop = true;
+let AlarmArray = [];
+
+
+//  local storage
+
+let alarmTime = {
+    hour: null,
+    minute: null,
+    second: null,  
+    id: Date.now(),
+    amPm,
+  }
 
 
 function updateTime(){
@@ -36,6 +73,21 @@ if(twelveHour==true){
     twelve.innerText = '24';
     clockDisplay.innerHTML = `${hours}:${minutes}:${seconds}`;
 }
+
+// for alarm array
+for(let i = 0; i < AlarmArray.length; i++){
+    if(hours == AlarmArray[i].hour && minutes == AlarmArray[i].minute && seconds == AlarmArray[i].second && amPm == AlarmArray[i].amPm){
+        console.log(alarmTime)
+        audio.play();
+        console.log("alarm is ringing");
+        setTimeout(function(){
+            audio.pause();
+            console.log("alarm is stoped")
+        }
+        , 5000);
+    }
+}
+
 }
 //here we use setInterval to update the clock every second
 setInterval(updateTime, 1000);
@@ -58,3 +110,80 @@ let mode = document.getElementById("mode");
 mode.addEventListener("click", function(){
     twelveHour = !twelveHour;
 });
+
+
+// for set alarm function
+
+function setAlarm(){
+    alarmTime = {
+        hour: hour.value,
+        minute: minute.value,
+        second: second.value,
+        amPm,
+        id: Date.now()
+    }
+    AlarmArray.push(alarmTime);
+    addAlarmList(alarmTime);
+    hour.value = '';
+    minute.value = '';
+    second.value = '';
+    am_pm_checkbox.classList.remove('active');
+    updateTime(alarmTime);
+    
+}
+
+
+var ul = document.querySelector('#alarm-list');
+function addAlarmList(alarmTime){
+
+    const Li = document.createElement('div');
+    Li.classList.add('list-box');
+    Li.innerHTML = `
+    <span class = 'alarm-hour'>${alarmTime.hour}</span>
+    <span class = 'li-column'>:</span>
+    <span class = 'alarm-minute'>${alarmTime.minute}</span>
+    <span class = 'li-column'>:</span>
+    <span class = 'alarm-second'>${alarmTime.second}</span>
+    <span class = 'alarm-am-pm'>${alarmTime.amPm}</span>
+    <span class ='alarm-delete' ${alarmTime.id}>
+        <i class="fa-solid fa-trash" id = "delete" data-id="${alarmTime.id}"></i>
+    </span>`;
+    ul.appendChild(Li);
+  }
+
+  // render alarm list
+  function renderAlarmList(){
+    ul.innerHTML = '';
+    for(let element of AlarmArray){
+      addAlarmList(element);
+    }
+  }
+
+
+//  clear all alarm
+  function clearAlarm(){
+    ul.innerHTML = '';
+    AlarmArray = [];
+  }
+
+// delete alarm
+    function deleteItem(id){
+        let newAlarmArray = AlarmArray.filter(function(alarm){
+        if(alarm.id != id){
+            return alarm;
+        }
+    });
+    AlarmArray = newAlarmArray;
+    renderAlarmList();
+    }
+
+
+  function deleteAlarm(e){
+   if(e.target.id == 'delete'){
+    let id = e.target.dataset.id;
+    console.log(id)
+    deleteItem(id)
+   }
+  }
+
+document.addEventListener('click', deleteAlarm);
