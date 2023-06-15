@@ -84,7 +84,7 @@ for(let i = 0; i < AlarmArray.length; i++){
     if(hours == AlarmArray[i].hour && minutes == AlarmArray[i].minute && seconds == AlarmArray[i].second && amPm == AlarmArray[i].amPm){
         console.log(alarmTime)
         audio.play();
-        console.log("alarm is ringing");
+        window.alert("alarm is ringing")
         setTimeout(function(){
             audio.pause();
             console.log("alarm is stoped")
@@ -120,6 +120,14 @@ mode.addEventListener("click", function(){
 // for set alarm function
 
 function setAlarm(){
+    if(hour.value == '' || minute.value == '' || second.value == ''){
+        warningNoty("Please fill all fields");
+        return;
+    }
+    if(hour.value > 24 || minute.value > 59 || second.value > 59){
+        warningNoty('@hr(0-24), min(0-59), sec (0, 59)');
+        return;
+    }
     alarmTime = {
         hour: hour.value,
         minute: minute.value,
@@ -127,6 +135,7 @@ function setAlarm(){
         amPm,
         id: Date.now()
     }
+    console.log(alarmTime)
     AlarmArray.push(alarmTime);
     if(AlarmArray.push(alarmTime)){
         successNoty("Alarm is set");
@@ -212,5 +221,6 @@ function successNoty(msg) {
     iziToast.warning({
       title: msg,
       position: "topRight",
+      timeout: 2000,
     });
   }
