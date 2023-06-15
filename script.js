@@ -83,8 +83,9 @@ if(twelveHour==true){
 for(let i = 0; i < AlarmArray.length; i++){
     if(hours == AlarmArray[i].hour && minutes == AlarmArray[i].minute && seconds == AlarmArray[i].second && amPm == AlarmArray[i].amPm){
         console.log(alarmTime)
-        audio.play();
         window.alert("alarm is ringing")
+        audio.play();
+        
         setTimeout(function(){
             audio.pause();
             console.log("alarm is stoped")
@@ -122,10 +123,23 @@ mode.addEventListener("click", function(){
 function setAlarm(){
     if(hour.value == '' || minute.value == '' || second.value == ''){
         warningNoty("Please fill all fields");
+        hour.value = '';
+        minute.value = '';
+        second.value = '';
         return;
     }
     if(hour.value > 24 || minute.value > 59 || second.value > 59){
         warningNoty('@hr(0-24), min(0-59), sec (0, 59)');
+        hour.value = '';
+        minute.value = '';
+        second.value = '';
+        return;
+    }
+    if(hour.value <9 || minute.value < 9 || second.value < 9){
+        warningNoty('Please add 0 before single digit');
+        hour.value = '';
+        minute.value = '';
+        second.value = '';
         return;
     }
     alarmTime = {
