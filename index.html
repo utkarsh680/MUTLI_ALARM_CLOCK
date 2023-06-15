@@ -8,6 +8,9 @@
     <link  rel="icon" type="images/x-icon" href="https://cdn-icons-png.flaticon.com/512/1571/1571726.png" />
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel='stylesheet' type='text/css' media='screen' href='style.css'>
+
+    <!-- izzi toast link -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/izitoast/dist/css/iziToast.min.css">
 </head>
 <body>
     <div class="outer-div">
@@ -23,9 +26,9 @@
                 <h1 id="am-pm-text">||</h1>
             </div>
             <div id="take-input">
-                <input type="number" id="hour">
-                    <input type="number" id="minute">
-                    <input type="number" id="second">
+                <input type="number" id="hour" placeholder="H" min="0" max="24">
+                    <input type="number" id="minute" placeholder="M" min="0" max="59">
+                    <input type="number" id="second" placeholder="S" min="0" max="59">
                     <div id="am-pm-checkbox">AM</div>  
             </div>
         <!-- alarm list section -->
@@ -53,5 +56,6 @@
         </div>
     </div>
 <script src="script.js" ></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/izitoast/1.4.0/js/iziToast.min.js"></script>
 </body>
 </html>

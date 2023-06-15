@@ -4,9 +4,6 @@ var dateDisplay = document.querySelector(".date");
 
 const audio = new Audio('/music.mp3');
 
-
-
-
 // for changin am pm
 var am_pm_checkbox = document.getElementById('am-pm-checkbox');
 var amPm = 'AM'
@@ -26,13 +23,21 @@ var hour = document.getElementById('hour');
 var minute = document.getElementById('minute');
 var second = document.getElementById('second');
 
+
 audio.loop = true;
 let AlarmArray = [];
+
+// let retrieveAlarm = JSON.parse(localStorage.getItem('LocalStorage'));
+
+// if (retrieveAlarm !== null) {
+//     AlarmArray = [...retrieveAlarm];
+//     renderAlarmList();
+// }
 
 
 //  local storage
 
-let alarmTime = {
+var alarmTime = {
     hour: null,
     minute: null,
     second: null,  
@@ -123,6 +128,9 @@ function setAlarm(){
         id: Date.now()
     }
     AlarmArray.push(alarmTime);
+    if(AlarmArray.push(alarmTime)){
+        successNoty("Alarm is set");
+    }
     addAlarmList(alarmTime);
     hour.value = '';
     minute.value = '';
@@ -153,6 +161,8 @@ function addAlarmList(alarmTime){
 
   // render alarm list
   function renderAlarmList(){
+    console.log("render")
+    // localStorage.setItem('LocalStorage', JSON.stringify(AlarmArray));
     ul.innerHTML = '';
     for(let element of AlarmArray){
       addAlarmList(element);
@@ -187,3 +197,20 @@ function addAlarmList(alarmTime){
   }
 
 document.addEventListener('click', deleteAlarm);
+
+
+// izitoast
+function successNoty(msg) {
+    iziToast.success({
+      title: msg,
+      position: "topRight",
+      timeout: 1200,
+    });
+  }
+  
+  function warningNoty(msg) {
+    iziToast.warning({
+      title: msg,
+      position: "topRight",
+    });
+  }
