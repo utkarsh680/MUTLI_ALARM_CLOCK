@@ -20,7 +20,11 @@
 
 https://clinquant-dieffenbachia-b8d537.netlify.app/
 
-<h1>Authors</h1>
+<h1>Features</h1>
+
+<li>
+  12 hr /24 hr timing
+</li>
 
 
 
