@@ -7,16 +7,9 @@
 
 <b>The Multi Alarm Clock offers several key features to enhance the alarm clock experience:</b>
 
-Multiple Alarms: Users can set multiple alarms and customize each alarm with unique settings such as alarm time, repeat pattern, alarm tone, and label.
-
-Repeat Patterns: The application supports various repeat patterns, including daily, weekly, specific days of the week, or custom repeat intervals.
-
-Customizable Tones: Users can select their preferred alarm tone from a range of options or use their own audio files as alarm sounds.
-
-Snooze Functionality: When an alarm goes off, users have the option to snooze the alarm for a defined period to allow for additional sleep.
+Multiple Alarms: Users can set multiple alarms, repeat pattern.
 
 User-friendly Interface: The interface provides an intuitive and easy-to-use design, enabling users to navigate and interact with the application effortlessly.
 
-Persistent Alarms: The alarms persist even if the application is closed, ensuring that users receive their alarms even after restarting their device.
+Notification Alerts: When you set alarm, delete alarm , clear alarm , wrong input , empty input and also when alarm start you got the notification about that.
 
-Notification Alerts: The application utilizes system notifications to alert users when alarms trigger, even if the app is running in the background
