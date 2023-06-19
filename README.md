@@ -22,9 +22,13 @@ https://clinquant-dieffenbachia-b8d537.netlify.app/
 
 <h1>Features</h1>
 
-<li>
-  12 hr /24 hr timing
-</li>
+ ## Features 
+  
+ - 1️⃣2️⃣ hr / 2️⃣4️⃣ hr Timeing 
+ - 🕣 Digital Clock 
+ - ✅ Set Multiple Alarm / ❎ Delete Alarm  
+ - 🔔 Push notification 
+ - Fully Responsive 🖥 Desktop / 💻 Laptop / 📱 Mobile 
 
 
 
