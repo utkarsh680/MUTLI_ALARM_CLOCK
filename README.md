@@ -26,7 +26,15 @@ https://clinquant-dieffenbachia-b8d537.netlify.app/
  - 🕣 Digital Clock 
  - ✅ Set Multiple Alarm / ❎ Delete Alarm  
  - 🔔 Push notification 
- - Fully Responsive 🖥 Desktop / 💻 Laptop / 📱 Mobile 
+ - Fully Responsive 🖥 Desktop / 💻 Laptop / 📱 Mobile
+
+<h1>Screenshots</h1>
+![clock1](https://github.com/utkarsh680/MUTLI_ALARM_CLOCK/assets/102253404/620c3f93-5262-453c-87f5-f5def2f223bf)
+![clock2](https://github.com/utkarsh680/MUTLI_ALARM_CLOCK/assets/102253404/57b7acd7-ee23-49e7-88ba-765ae4d1d9d2)
+![clock3](https://github.com/utkarsh680/MUTLI_ALARM_CLOCK/assets/102253404/6316a961-ff57-4987-ac8b-6abe8fb84f68)
+![clock4](https://github.com/utkarsh680/MUTLI_ALARM_CLOCK/assets/102253404/f584a17e-c32c-4082-9f5f-6c96f1fe0236)
+
+
 
 
 
