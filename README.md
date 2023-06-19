@@ -13,7 +13,7 @@
 
 <b>Notification Alerts:</b> When you set alarm, delete alarm , clear alarm , wrong input , empty input and also when alarm start you got the notification about that.
 
-<h1><img src = "https://s.w.org/images/core/emoji/13.0.1/svg/1f440.svg" alt="android" width="50" height="50"/>  Demo</h1>
+<h1><img src = "https://s.w.org/images/core/emoji/13.0.1/svg/1f440.svg" alt="android" width="30" height="30"/>  Demo</h1>
 
 https://clinquant-dieffenbachia-b8d537.netlify.app/
 
