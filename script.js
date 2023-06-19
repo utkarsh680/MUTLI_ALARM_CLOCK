@@ -235,7 +235,7 @@ function successNoty(msg) {
     iziToast.success({
       title: msg,
       position: "topRight",
-      timeout: 1200,
+      timeout: 2000,
     });
   }
   
