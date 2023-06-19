@@ -29,7 +29,7 @@ https://clinquant-dieffenbachia-b8d537.netlify.app/
  - Fully Responsive 🖥 Desktop / 💻 Laptop / 📱 Mobile
 
 <h1>Screenshots</h1>
-![clock1](https://github.com/utkarsh680/MUTLI_ALARM_CLOCK/assets/102253404/620c3f93-5262-453c-87f5-f5def2f223bf)
+![clock1](https://github.com/utkarsh680/MUTLI_ALARM_CLOCK/assets/102253404/ccf1411b-0b62-4391-8cc9-7f4d9396f63f)
 
 
 
