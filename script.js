@@ -171,11 +171,11 @@ function setAlarm(){
 
 // for stop alarm
 function stopAlarm(){
-    audio.pause();
-    stopText.style.display = 'none';
-    stopSnooze.style.display = 'none';   
-    successNoty("Alarm is stopped");
-    audio.currentTime = 0;
+  audio.pause();
+  audio.currentTime = 0;
+  stopText.style.display = 'none';
+  stopSnooze.style.display = 'none';
+  successNoty("Alarm is stopped");
 }
 
 
