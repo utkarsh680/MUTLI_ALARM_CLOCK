@@ -21,8 +21,6 @@
 https://clinquant-dieffenbachia-b8d537.netlify.app/
 
 <h1>Features</h1>
-
- ## Features 
   
  - 1️⃣2️⃣ hr / 2️⃣4️⃣ hr Timeing 
  - 🕣 Digital Clock 
