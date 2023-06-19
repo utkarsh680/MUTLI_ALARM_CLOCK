@@ -7,9 +7,9 @@
 
 <b>The Multi Alarm Clock offers several key features to enhance the alarm clock experience:</b>
 
-Multiple Alarms: Users can set multiple alarms, repeat pattern.
+<b>Multiple Alarms:</b> Users can set multiple alarms, repeat pattern.
 
-User-friendly Interface: The interface provides an intuitive and easy-to-use design, enabling users to navigate and interact with the application effortlessly.
+<b>User-friendly Interface:</b> The interface provides an intuitive and easy-to-use design, enabling users to navigate and interact with the application effortlessly.
 
-Notification Alerts: When you set alarm, delete alarm , clear alarm , wrong input , empty input and also when alarm start you got the notification about that.
+<b>Notification Alerts:</b> When you set alarm, delete alarm , clear alarm , wrong input , empty input and also when alarm start you got the notification about that.
 
