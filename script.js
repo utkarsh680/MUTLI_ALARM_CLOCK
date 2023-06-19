@@ -2,7 +2,7 @@ var clockDisplay = document.getElementById('clock-display');
 var am_pm_text_display = document.getElementById("am-pm-text");
 var dateDisplay = document.querySelector(".date");
 
-const audio = new Audio('/music.mp3');
+const audio = new Audio('/alarmTone/alarm_music.mp3');
 var stopText = document.querySelector(".stop-text");
 var stopSnooze = document.getElementById('stop-alarm');
 
