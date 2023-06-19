@@ -13,11 +13,9 @@ am_pm_checkbox.addEventListener('click', function(){
     if(am_pm_checkbox.classList.contains('active')){
         amPm = 'PM';
         am_pm_checkbox.innerHTML = 'PM';
-        console.log(amPm);
     }else{
         amPm = 'AM';
         am_pm_checkbox.innerHTML = 'AM';
-        console.log(amPm);
     }
 });
 
@@ -56,7 +54,7 @@ if(twelveHour==true){
     twelve.innerText = '12';
     if(hours > 12){
     hours = hours-12;
-    clockDisplay.innerHTML = `0${hours}:${minutes}:${seconds}`;
+    clockDisplay.innerHTML = `${formateTime(hours)}:${minutes}:${seconds}`;
     }
     else if(hours == 0){
     hours = 12;
@@ -72,7 +70,6 @@ if(twelveHour==true){
 // for alarm array
   for(let i = 0; i < AlarmArray.length; i++){
     if(hours == AlarmArray[i].hour && minutes == AlarmArray[i].minute && seconds == AlarmArray[i].second && amPm == AlarmArray[i].amPm){
-        console.log(alarmTime)
         audio.play();
         stopText.style.display = 'block';
         stopSnooze.style.display = 'block';
@@ -144,7 +141,6 @@ function setAlarm(){
       amPm,
       id: Date.now()
   }
-  console.log(alarmTime)
   AlarmArray.push(alarmTime);
   successNoty("Alarm is set");
   renderAlarmList();  
@@ -184,12 +180,16 @@ function addAlarmList(alarmTime){
 //  clear all alarm
 function clearAlarm(){
   ul.innerHTML = '';
+  if(AlarmArray.length == 0){
+    warningNoty("No alarm is set");
+    return;
+  }
+  successNoty("All alarms are cleared");
   AlarmArray = [];
 }
 
 // delete alarm
 function deleteItem(deleteId){
-  console.log('delete')
   let newAlarmArray = AlarmArray.filter(function(alarm){
     return alarm.id !== Number(deleteId);
   });
@@ -207,7 +207,6 @@ document.addEventListener('click', function(e){
 
 // render alarm list
 function renderAlarmList(){
-  console.log("render")
   localStorage.setItem('LocalStorage', JSON.stringify(AlarmArray));
   ul.innerHTML = '';
   for(let element of AlarmArray){
