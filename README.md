@@ -1,7 +1,9 @@
 
 
 <h1><img src="https://cdn.iconscout.com/icon/free/png-512/free-alarm-clock-time-watch-ringing-ring-38818.png?f=avif&w=256" alt="android" width="35" height="35"/>  MULTI ALARM CLOCK</h1>
-<p>The Multi Alarm Clock is a versatile alarm clock application developed for various platforms, designed to help users manage multiple alarms efficiently.<br> This project is hosted on GitHub under the repository name "MULTI_ALARM_CLOCK.<br>
+<p>The Multi Alarm Clock is a versatile alarm clock application developed for various platforms, designed to help users manage multiple alarms efficiently.
+  <br>To create the interface, HTML is used to structure the page and define the elements of the user interface,<br> including the clock display, input fields, and buttons. CSS is used to style the interface,<br> making it visually appealing and easy to use.
+  <br> This project is hosted on GitHub under the repository name "MULTI_ALARM_CLOCK.<br>
   Overall, the alarm clock project is a great way to practice using HTML, CSS, and JavaScript to build a functional and interactive web application."</p>
 
 <h3>Features</h3>
