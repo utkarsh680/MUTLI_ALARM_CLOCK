@@ -18,7 +18,7 @@
 
 <h1><img src = "https://s.w.org/images/core/emoji/13.0.1/svg/1f440.svg" alt="android" width="30" height="30"/>  Demo</h1>
 
-https://clinquant-dieffenbachia-b8d537.netlify.app/
+https://multialarmclock.netlify.app/
 
 <h1>Features</h1>
   
